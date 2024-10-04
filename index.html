@@ -1,44 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>my portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    />
-  </head>
-  <body>
-    <header class="header">
-      <a href="#" class="logo"><span>sejal</span></a>
-      <a href="#" class="active">About </a>
-      <a href="#" class="contact">Contact me</a>
-    </header>
-    <section class="home">
-      <div class="home-content">
-        <h3>Hello</h3>
-        <h1>
-          I'm <span></span><br /><span></span> a FRONT END<br /><span
-            >DEVELOPER</span
-          >
-        </h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --background-color: white;
+            --text-color: black;
+        }
 
-        <br />
-        <br />
-        <div class="btn-box">
-          <!-- <button class="btn-1">Skills</button> -->
-          <button class="btn-2">projects</button>
-        </div>
-      </div>
-      <div class="image-box">
-        <img src="cartoongirl.png" alt="" />
-      </div>
-    </section>
-  </body>
+        body.dark-mode {
+            --background-color: #121212;
+            --text-color: white;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+    </style>
+</head>
+<body>
+    <button id="theme-toggle">Toggle Dark Mode</button>
+
+    <!-- JavaScript for theme toggling -->
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        // Toggle dark mode on button click
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+
+            // Save the mode in local storage
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // On page load, check for saved theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-mode');
+        }
+    </script>
+
+</body>
 </html>
