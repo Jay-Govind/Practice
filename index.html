@@ -3,50 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        :root {
-            --background-color: white;
-            --text-color: black;
-        }
-
-        body.dark-mode {
-            --background-color: #121212;
-            --text-color: white;
-        }
-
-        body {
-            background-color: var(--background-color);
-            color: var(--text-color);
-        }
-    </style>
+    <title>Open Facebook</title>
 </head>
 <body>
-    <button id="theme-toggle">Toggle Dark Mode</button>
-
-    <!-- JavaScript for theme toggling -->
-    <script>
-        const toggleButton = document.getElementById('theme-toggle');
-        const body = document.body;
-
-        // Toggle dark mode on button click
-        toggleButton.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-
-            // Save the mode in local storage
-            if (body.classList.contains('dark-mode')) {
-                localStorage.setItem('theme', 'dark');
-            } else {
-                localStorage.setItem('theme', 'light');
-            }
-        });
-
-        // On page load, check for saved theme preference
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
-            body.classList.add('dark-mode');
-        }
-    </script>
-
+    <form action="https://www.facebook.com" method="get" target="_blank">
+        <input type="text" name="q" placeholder="Search on Facebook">
+        <button type="submit">Search</button>
+    </form>
 </body>
 </html>
