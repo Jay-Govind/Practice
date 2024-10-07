@@ -1,167 +1,54 @@
-body {
-  font-family: "Montserrat", sans-serif;
-  margin: 0;
-  background-color: #121212;
-  color: white;
-  overflow: hidden;
-  /* scroll NAHIi ajeyga site pr es se */
-}
-
-.main {
+.container {
+  position: relative;
+  height: 600px;
+  width: 80%;
+  background-color: azure;
+  margin: 10px auto;
+  border: 2px solid black;
   display: flex;
-  height: 100vh;
-  padding: 0.5rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
-.sidebar {
-  background-color: rgb(17, 16, 16);
-  width: 340px;
-  border-radius: 1rem;
-  margin-right: 0.5rem;
-  /* 1 rem = 16px */
-}
-
-.main-content {
-  background-color: #121212;
-  flex: 1;
-  /* kitni bhi space width bachi hogi it will go to musci-player */
-  overflow: auto;
-  /* scrolling ke liye .. we need only for main-content */
-  border-radius: 1rem;
-}
-
-.music-player  
-/* navigation bar mneche wwala */ {
-  background-color: black;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 72px;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-}
-
-.nav {
-  background-color: #121212;
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.container div {
   height: 100px;
-  padding: 0.5rem 0.75rem;
+  width: 300px;
+  text-align: center;
+  font-size: 1.5em;
 }
 
-.nav-option {
-  opacity: 0.7;
-  line-height: 2.5rem;
-  padding: 0.5rem 0.75 rem;
+#orange {
+  background-color: #ffa500;
+  height: 200px;
+  font-size: 3.5em;
+  align-self: flex-end;
 }
 
-.nav-option:hover {
-  opacity: 1;
-  line-height: 2.5rem;
+h1 {
+  text-align: center;
 }
 
-.nav-option i {
-  font-size: 1.25rem;
+#violet {
+  background-color: #70369d;
 }
 
-.nav-option a {
-  font-size: 1 rem;
-  margin-left: 1rem;
+#indigo {
+  background-color: #4b369d;
 }
 
-.library {
-  background-color: #121212;
-  border-radius: 1rem;
-  height: 100%;
-  margin-top: 0.5rem;
-  padding: 0.75rem;
+#blue {
+  background-color: #487de7;
+  height: 75px;
 }
 
-.options {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  opacity: 0.7;
+#green {
+  background-color: #79c314;
 }
 
-.options:hover {
-  opacity: 1;
+#yellow {
+  background-color: #faeb36;
 }
 
-.lib-option img {
-  height: 1.25rem;
-  width: 1.25rem;
-  margin-right: 1rem;
-}
-
-.icons {
-  font-size: 1.25rem;
-  display: flex;
-}
-
-.icons i {
-  opacity: 0.5;
-  margin-right: 1rem;
-}
-
-.icons i:hover {
-  opacity: 1;
-}
-
-.box {
-  background-color: #232323;
-  height: 8rem;
-  border-radius: 1 rem;
-  margin: 0.75rem 0 1.75rem 0;
-  padding: 0.75rem 1rem;
-}
-
-.box-p1 {
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-.box-p2 {
-  font-size: 0.85rem;
-  opacity: 0.9;
-}
-
-.badge {
-  background-color: white;
-  border: none;
-  border-radius: 100px;
-  padding: 0.25rem 1rem;
-  font-weight: 700;
-  margin-top: 0.65rem;
-  height: 2rem;
-  width: fit-content;
-}
-
-.sticky-nav {
-  position: sticky;
-  top: 0;
-  display: flex;
-  /* justify-content: space-between; */
-  align-items: center;
-  padding: 1rem 0 1rem 0;
-  justify-content: flex-end;
-}
-
-.sticky-nav-icons {
-  margin-left: 0.75rem;
-}
-
-.sticky-nav-options {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.nav-item {
-  margin-right: 1rem;
+#red {
+  background-color: #e81416;
 }
