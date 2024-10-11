@@ -1,9 +1,13 @@
-const object = {
-  message: "Hello, World !",
+let length = 4;
+function callback() {
+  console.log(this.length);
+}
 
-  logMessage() {
-    console.log(this.message);
+const object = {
+  length: 5,
+  method(callback) {
+    callback();
   },
 };
 
-setTimeout(object.logMessage(), 1000);
+object.method(callback, 1, 2);

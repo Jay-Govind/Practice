@@ -1,106 +1,80 @@
 * {
+  font-family: "Montserrat", serif;
   margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-  background-color: #000;
+  background-color: black;
+  color: white;
+  overflow: hidden;
 }
 
-.main_box {
-  background-image: url(photo.jpg);
+.main {
+  display: flex;
   height: 100vh;
-  background-size: cover;
 }
 
-.main_box #check {
-  display: none;
+.sidebar {
+  background-color: green;
+  width: 340px;
+  border-radius: 1rem;
 }
 
-.main_box .btn_one {
-  font-size: 30px;
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  opacity: 0;
-  color: white;
+.main-content {
+  background-color: #000;
+  flex: 1;
+  overflow: auto;
 }
 
-.main_box .sidebar_menu {
-  height: 100%;
-  width: 20%;
-  background-color: rgba(255, 255, 255, 0.12);
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
-}
-
-.main_box .sidebar_menu .logo {
-  font-size: 25px;
-  font-weight: bold;
+.music-player {
+  background-color: black;
+  position: fixed;
+  bottom: 0;
   width: 100%;
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
-  padding-top: 15px;
-  padding-bottom: 15px;
+  height: 72px;
 }
 
-.main_box .sidebar_menu .logo a {
+a {
   text-decoration: none;
-  color: white;
-  padding-left: 40px;
 }
 
-.sidebar_menu .btn_two {
-  color: grey;
-  font-size: 25px;
-  position: relative;
-  left: 90%;
-  bottom: 50px;
-}
-
-.sidebar_menu .menu ul {
-  list-style: none;
-}
-
-.sidebar_menu .menu ul li {
-  margin: 15px;
-  font-size: 18px;
-  color: white;
-  padding: 10px;
-  transition-duration: 200ms;
-}
-
-.sidebar_menu .menu ul li:hover {
-  box-shadow: 0px 0px 7px rgba(255, 255, 255, 0.5);
-}
-
-.sidebar_menu .menu ul li:hover i {
-  transform: scale(1.2); /* Adjust the scale factor as per your preference */
-}
-
-.sidebar_menu .menu ul li a {
-  color: white;
-  text-decoration: none;
-  padding-left: 8px;
-}
-
-.sidebar_menu .social_media {
-  position: absolute;
-  top: 93%;
-}
-
-.sidebar_menu .social_media ul {
+.nav {
+  background-color: #121212;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 100px;
-  padding-left: 80px;
-  padding-top: 0px;
-  padding-bottom: 50px;
+  padding: 0.5rem 0.75rem;
 }
 
-.sidebar_menu .social_media a {
-  color: white;
-  opacity: 0.5;
-  padding-left: 3px;
-  transition-duration: 200ms;
-  font-size: 15px;
+.nav-option {
+  line-height: 2.5rem;
+  opacity: 0.7;
+  padding: 0.5rem 0.75rem;
 }
 
-.sidebar_menu .social_media a:hover {
+.nav-option:hover {
   opacity: 1;
-  font-size: 17px;
+}
+
+.nav-option i {
+  font-size: 1.25rem;
+}
+
+.nav-option a {
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+.library {
+  background-color: #121212;
+  border-radius: 1rem;
+}
+
+.options {
+  display: inline;
+  justify-content: space-between;
+}
+
+.lib-option img {
+  height: 1.25rem;
+  width: 1.25rem;
 }
