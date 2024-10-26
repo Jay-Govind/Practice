@@ -1,13 +1,14 @@
-const express = require("express");
-const app = express();
-const PORT = 3000;
+let length = 4;
 
-// Define a GET endpoint
-app.get("/hello", (req, res) => {
-  res.send("Hello, World!");
-});
+function callback() {
+  console.log(this.length);
+}
 
-// Start the server
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+const object = {
+  length: 5,
+  method(callback) {
+    callback.call(globalThis); // Use `globalThis` for compatibility across environments
+  },
+};
+
+object.method(callback); // This will output 4
