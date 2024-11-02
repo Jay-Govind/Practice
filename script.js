@@ -1,14 +1,10 @@
-let length = 4;
+function outerFunc() {
+  let x = 5;
+  let y = 6;
+  function innerFunc() {
+    console.log(x);
+  }
 
-function callback() {
-  console.log(this.length);
+  innerFunc();
 }
-
-const object = {
-  length: 5,
-  method(callback) {
-    callback.call(globalThis); // Use `globalThis` for compatibility across environments
-  },
-};
-
-object.method(callback); // This will output 4
+outerFunc();
